@@ -1,7 +1,35 @@
+@font-face {
+  font-family: "Poppins";
+  font-weight: 200;
+  src: url(./fonts/Poppins-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  src: url(./fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 600;
+  src: url(./fonts/Poppins-SemiBold.ttf);
+}
+
+:root {
+  --ff: "Poppins", sans-serif;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: var(--ff);
+  font-weight: 400;
+  color: hsl(234, 12%, 34%);
 }
