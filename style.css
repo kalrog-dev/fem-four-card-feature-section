@@ -73,18 +73,34 @@ main {
 }
 
 /* Layout */
+.intro {
+  margin-bottom: 6em;
+}
+
 .cards {
   display: grid;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
   background-color: #fff;
-  border-top-width: 3px;
+  border-top-width: 4px;
   border-top-style: solid;
   border-radius: 8px;
   margin-bottom: 2em;
   padding: 2.15em;
   box-shadow: 0 15px 30px -11px hsl(213, 47%, 67%, 0.5);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 8px;
 }
 
 .card:nth-of-type(1) {
@@ -101,4 +117,12 @@ main {
 
 .card:nth-of-type(4) {
   border-top-color: hsl(212, 86%, 64%);
+}
+
+.card__title {
+  margin-bottom: 0.2em;
+}
+
+.card__image {
+  align-self: flex-end;
 }
